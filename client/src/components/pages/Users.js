@@ -1,11 +1,25 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 
-export default class Users extends Component {
-  render() {
-    return (
-      <Fragment>
-        <h2>Currently Online</h2>
-      </Fragment>
-    );
-  }
+export default function Users() {
+  const users = [
+    {
+      name: 'jim',
+    },
+    {
+      name: 'alan',
+    },
+    {
+      name: 'misty',
+    },
+  ];
+  return (
+    <Fragment>
+      <h2>Currently Online</h2>
+      <ul>
+        {users.map((user) => (
+          <li>{user.name}</li>
+        ))}
+      </ul>
+    </Fragment>
+  );
 }
